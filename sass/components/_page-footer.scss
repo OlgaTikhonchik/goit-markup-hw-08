@@ -1,0 +1,191 @@
+.page-footer__container {
+  @extend %container;
+  display: flex;
+  align-items: baseline;
+}
+
+.address {
+  width: 231px;
+  margin-right: 70px;
+}
+
+.page-footer {
+  display: flex;
+  align-items: baseline;
+  background-color: $secondary-bg-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.inscription {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: $white-color;
+  @extend %link;
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.inscription__accent {
+  color: $accent-color;
+}
+.address__text {
+  margin-bottom: 9px;
+  color: $white-color;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  font-style: normal;
+}
+
+.address__link {
+  @extend %link;
+  display: inline-block;
+  @extend %list;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 9px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.address__number {
+  color: rgba(255, 255, 255, 0.6);
+  @extend %link;
+  @extend %list;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.footer-social {
+  margin-right: 93px;
+}
+
+.footer-social__title {
+  display: block;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $white-color;
+  margin-bottom: 20px;
+}
+
+.footer-social__list {
+  display: flex;
+  gap: 10px;
+  @extend %list;
+}
+
+.footer-social__link {
+  @extend %link;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  color: $white-color;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: background-color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $white-color;
+  }
+}
+
+.footer-social__link svg {
+  transition: fill 250ms $timing-function;
+}
+
+.footer-social__icon {
+  fill: currentColor;
+}
+
+.footer-mailing__lable {
+  display: block;
+  margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $white-color;
+}
+
+.mailing-form {
+  display: flex;
+}
+
+.mailing-form__label {
+  margin-right: 12px;
+}
+
+.mailing-form__input {
+  width: 358px;
+
+  padding: 15px 16px;
+  align-items: center;
+  letter-spacing: 0.03em;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  border-radius: 4px;
+  background-color: $secondary-bg-color;
+  transition: border-color 250ms $timing-function;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:focus {
+    border-color: $accent-color;
+  }
+}
+
+.button-mailing {
+  width: 200px;
+  padding: 10px 28px;
+  background-color: $accent-color;
+  color: $white-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: $accent-color;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  &:focus,
+  &:hover {
+    background-color: $active-bg-color;
+  }
+}
+
+.button-mailing__icon {
+  margin-left: 10px;
+}

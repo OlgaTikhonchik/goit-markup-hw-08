@@ -1,0 +1,90 @@
+.teams {
+  @extend %section;
+  background-color: $tertiary-bg-color;
+}
+
+.teams__container {
+  @extend %container;
+}
+
+.teams__title {
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.teams__lable {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+}
+
+.teams__list {
+  @extend %list;
+  display: flex;
+  gap: 30px;
+}
+
+.teams__item {
+  flex-basis: calc((100% - 90px) / 4);
+  box-shadow: $card-list-shadow;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.teams__name {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  background-color: $white-color;
+}
+.teams__social-list {
+  @extend %list;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.teams__social-link {
+  @extend %link;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  background-color: $white-color;
+  color: $social-color;
+  border-radius: 50%;
+  transition: background-color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $white-color;
+  }
+}
+
+.teams__social-link svg {
+  transition: fill 250ms $timing-function;
+}
+
+.teams__text {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: $title-text-color;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+}
+
+.teams__social-icon {
+  fill: currentColor;
+}

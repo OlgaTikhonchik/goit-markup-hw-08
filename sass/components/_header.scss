@@ -1,0 +1,147 @@
+.header {
+  @extend %container;
+  display: flex;
+  align-items: center;
+}
+
+.head {
+  border-bottom: 1px solid #ececec;
+}
+
+.logo {
+  color: $secondary-text-color;
+  @extend %link;
+  font-family: "Raleway";
+  font-size: 26px;
+  line-height: 1.2;
+  margin-right: 93px;
+  margin-top: 24px;
+  margin-bottom: 25px;
+}
+
+.logo__accent {
+  color: $accent-color;
+}
+
+.site-nav__link {
+  position: relative;
+  display: block;
+  color: $primary-text-color;
+  @extend %link;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.site-nav__link::after {
+  position: absolute;
+  content: "";
+  background-color: $accent-color;
+  border-radius: 2px;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transition: transform 250ms $timing-function;
+}
+
+.site-nav__link:focus::after,
+.site-nav__link:hover::after {
+  transform: scaleX(1);
+}
+
+.site-nav__link--current {
+  color: $accent-color;
+  letter-spacing: 0.02em;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: $accent-color;
+    border-radius: 2px;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transition: transform 250ms $timing-function;
+    transform: scaleX(1);
+  }
+}
+
+.site-nav {
+  @extend %list;
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-nav__item {
+  margin-right: 50px;
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+.contacts {
+  @extend %list;
+  display: flex;
+  margin-left: auto;
+}
+
+.contact__item {
+  @extend %link;
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-right: 50px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.contact__link {
+  color: $accent-color;
+  @extend %link;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  transition: color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $title-text-color;
+  }
+}
+.contact__icon {
+  margin-right: 10px;
+  fill: currentColor;
+  transition: fill 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
+
+.contact__number {
+  color: $title-text-color;
+  @extend %link;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  transition: color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
