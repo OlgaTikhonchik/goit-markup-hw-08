@@ -5,29 +5,91 @@
   padding-bottom: 118px;
   margin-left: auto;
   margin-right: auto;
-  // max-width: 1600px;
+  max-width: 1600px;
   background-size: cover;
   background-position: center;
 
-  @media screen and (min-width: $mobile) {
+  @media screen and (max-width: 767px) {
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("../images/");
+      url("../images/header480.jpg");
+    // max-width: 480px;
 
     height: 400px;
   }
 
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url("../images/overlay.jpg");
+  @media screen and (min-width: $tablet) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/header780.jpg");
+    // max-width: 768px;
 
-  height: 600px;
+    height: 400px;
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/header1600.jpg");
+    // max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/header480@2x.jpg");
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/header780@2x.jpg");
+    }
+  }
+}
+
+@media screen and (max-width: $desktop) {
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/header1600@2x.jpg");
+    }
+  }
 }
 
 .hero__title {
@@ -35,18 +97,27 @@
   margin-bottom: 30px;
   color: $white-color;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @media screen and (max-width: $tablet) {
+    font-size: 26px;
+    line-height: 1.61;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .hero__button--primary {
   border-radius: 4px;
   border: 1px solid transparent;
   min-height: 50px;
-  min-width: 216px;
+  min-width: 200px;
   color: $white-color;
   background-color: $accent-color;
   font-family: "Roboto";
@@ -60,5 +131,10 @@
   &:hover,
   &:focus {
     background-color: $active-bg-color;
+  }
+
+  @media screen and (min-width: $desktop) {
+    min-height: 50px;
+    min-width: 216px;
   }
 }
