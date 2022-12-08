@@ -17,7 +17,7 @@
   </head>
   <body>
     <!--Шапка сайта-->
-    <!-- <header class="container header">
+    <header class="container header">
       <nav class="header__nav">
         <a class="logo" href="./index.html"
           ><span class="logo__accent">Web</span>Studio</a
@@ -47,7 +47,7 @@
           +38 096 111 11 11</a>
         </li>
       </ul>
-    </header> -->
+    </header>
 
     <main>
       <!--Герой-->
@@ -168,15 +168,36 @@
           <h2 class="teams__title">Наша команда</h2>
           <ul class="teams__list list">
             <li class="teams__item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/igor270.jpg 1x,
+                    ./images/igor270@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/igor354.jpg 1x,
+                    ./images/igor354@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/igor450.jpg  1x,
+                    ./images/igor450@2x.jpg 2x"
+                  
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/igor450.jpg"
+                  alt="Фото Ігора Дем'яненка"
+                  width="450"
+                  class="team__foto"
+                />
+              </picture>
 
               
-              <img
-                class="teams__foto"
-                src="./images/igor450.jpg"
-                alt="Фото чоловіка"
-                width="270"
-                height="260"
-              />
+              
               <div class="teams__name">
                <h3 class="teams__lable">Ігор Дем'яненко</h3>
                <p class="teams__text">Product Designer</p>
@@ -214,13 +235,34 @@
               </div>
             </li>
             <li class="teams__item">
-              <img
-                class="teams__foto"
-                src="./images/olga450.jpg"
-                alt="Фото жінки"
-                width="270"
-                height="260"
-              />
+               <picture>
+                <source
+                  srcset="
+                    ./images/olga270.jpg 1x,
+                    ./images/olga270@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/olga354.jpg 1x,
+                    ./images/olga354@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/olga450.jpg  1x,
+                    ./images/olga450@2x.jpg 2x"
+                  
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/olga450.jpg"
+                  alt="Фото Ольги Репіної"
+                  width="450"
+                  class="team__foto"
+                />
+              </picture>
+              
               <div class="teams__name">
                <h3 class="teams__lable">Ольга Рєпіна</h3>
                <p class="teams__text">Frontend Developer</p>
@@ -258,13 +300,34 @@
               </div>
             </li>
             <li class="teams__item">
-              <img
-                class="teams__foto"
-                src="./images/mikola450.jpg"
-                alt="Фото чоловіка"
-                width="270"
-                height="260"
-              />
+               <picture>
+                <source
+                  srcset="
+                    ./images/mikola270.jpg 1x,
+                    ./images/mikola270@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/mikola354.jpg 1x,
+                    ./images/mikola354@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mikola450.jpg  1x,
+                    ./images/mikola450@2x.jpg 2x"
+                  
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/mikola450.jpg"
+                  alt="Фото Миколи Тарасова "
+                  width="450"
+                  class="team__foto"
+                />
+              </picture>
+              
               <div class="teams__name">
                <h3 class="teams__lable">Микола Тарасов</h3>
                <p class="teams__text">Marketing</p>
@@ -302,13 +365,33 @@
               </div>
             </li>
             <li class="teams__item">
-              <img
-                class="teams__foto"
-                src="./images/mixail450.jpg"
-                alt="Фото чоловіка"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mixail270.jpg 1x,
+                    ./images/mixail270@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/mixail354.jpg 1x,
+                    ./images/mixail354@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mixail450.jpg  1x,
+                    ./images/mixail450@2x.jpg 2x"
+                  
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/mixail450.jpg"
+                  alt="Фото Михайла Єрмакова "
+                  width="450"
+                  class="team__foto"
+                />
+              </picture>
               <div class="teams__name">
                <h3 class="teams__lable">Михайло Єрмаков</h3>
                <p class="teams__text">UI Designer</p>
@@ -403,7 +486,7 @@
     </main>
 
     <!--Футер-->
-    <!-- <footer class="page-footer">
+    <footer class="page-footer">
       <div class="page-footer__container container">
         <div class="address">
           <a class="inscription" href="/"
@@ -468,11 +551,11 @@
       </div>
 
       
-    </footer> -->
+    </footer>
 
     <!---  Modal ---->
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal__button-close" data-modal-close>
           <svg class="modal__icon-close" width="18" height="18">
@@ -526,11 +609,11 @@
           </form>
         </div>
       </div>
-    </div> -->
+    </div>
 
     
 
-    <!-- <script src="./js/modal.js"></script>
-    <script src="./js/mobile-menu.js"></script> -->
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

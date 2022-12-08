@@ -1,12 +1,28 @@
 .page-footer__container {
   @extend %container;
-  display: flex;
-  align-items: baseline;
+
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+    // row-gap: 60px;
+  }
 }
 
 .address {
-  width: 231px;
-  margin-right: 70px;
+  @media screen and (min-width: 480px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 231px;
+    margin-right: 70px;
+    text-align: start;
+    margin-bottom: 0;
+  }
 }
 
 .page-footer {
@@ -66,7 +82,11 @@
 }
 
 .footer-social {
-  margin-right: 93px;
+  // margin-right: 93px;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 
 .footer-social__title {
@@ -79,12 +99,21 @@
   text-transform: uppercase;
   color: $white-color;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 
 .footer-social__list {
   display: flex;
   gap: 10px;
   @extend %list;
+
+  @media screen and (min-width: 480px) {
+    justify-content: center;
+    margin-bottom: 60px;
+  }
 }
 
 .footer-social__link {
@@ -128,18 +157,28 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $white-color;
+
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 
 .mailing-form {
-  display: flex;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .mailing-form__label {
   margin-right: 12px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .mailing-form__input {
-  width: 358px;
+  width: 450px;
 
   padding: 15px 16px;
   align-items: center;
@@ -150,6 +189,7 @@
   border-radius: 4px;
   background-color: $secondary-bg-color;
   transition: border-color 250ms $timing-function;
+  margin-bottom: 20px;
 
   &::placeholder {
     font-weight: 400;
@@ -161,10 +201,15 @@
   &:focus {
     border-color: $accent-color;
   }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 }
 
 .button-mailing {
   width: 200px;
+  height: 50px;
   padding: 10px 28px;
   background-color: $accent-color;
   color: $white-color;
@@ -175,7 +220,8 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  display: flex;
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
@@ -183,6 +229,10 @@
   &:focus,
   &:hover {
     background-color: $active-bg-color;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
   }
 }
 
