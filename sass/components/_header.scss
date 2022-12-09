@@ -2,10 +2,7 @@
   @extend %container;
   display: flex;
   align-items: center;
-
-  
 }
-
 
 .head {
   border-bottom: 1px solid #ececec;
@@ -23,19 +20,17 @@
   line-height: 1.16;
   margin-right: 276px;
 
-  @media screen and (max-width: 480px){
+  @media screen and (max-width: 480px) {
     padding-top: 16px;
     padding-bottom: 16px;
   }
-  
-  
+
   @media screen and (min-width: 768px) {
     margin-right: 87px;
     font-size: 24px;
     line-height: 1.16;
     margin-top: 24px;
     margin-bottom: 25px;
-
   }
 
   @media screen and (min-width: 1200px) {
@@ -44,16 +39,13 @@
     line-height: 1.19;
     margin-top: 24px;
     margin-bottom: 25px;
-
   }
 }
-
 
 .logo__accent {
   color: $accent-color;
   // margin-top: 16px;
   // margin-bottom: 16px;
-
 }
 
 .site-nav__link {
@@ -64,39 +56,34 @@
     position: relative;
     display: block;
     color: $primary-text-color;
-  
+
     font-weight: 500;
     letter-spacing: 0.02em;
     padding-top: 32px;
     padding-bottom: 32px;
     transition: color 250ms $timing-function;
-  
+
     &:hover,
     &:focus {
       color: $accent-color;
     }
-
   }
   @media screen and (min-width: 1200px) {
     position: relative;
     display: block;
     color: $primary-text-color;
-    
+
     font-weight: 500;
     letter-spacing: 0.02em;
     padding-top: 32px;
     padding-bottom: 32px;
     transition: color 250ms $timing-function;
-  
+
     &:hover,
     &:focus {
       color: $accent-color;
     }
-    
   }
- 
-
-  
 }
 
 .site-nav__link::after {
@@ -142,15 +129,24 @@
 
   @media screen and (min-width: 768px) {
     margin-right: 90px;
-
   }
-  
 }
 
 .site-nav__item {
-  margin-right: 50px;
-  &:last-child {
-    margin-right: 0px;
+  margin-right: 0;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 50px;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 50px;
+    &:last-child {
+      margin-right: 0px;
+    }
   }
 }
 .contacts {
@@ -160,52 +156,37 @@
   @media screen and (max-width: 767px) {
     margin-bottom: 64px;
     flex-direction: column-reverse;
-
   }
 
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: column;
-
   }
-  
-  @media screen  and (min-width: 1200px){
+
+  @media screen and (min-width: 1200px) {
     display: flex;
     flex-direction: row;
     margin-left: auto;
-  
   }
-    
-  
-
-  
- 
 }
 
 .contact__item {
   @extend %link;
   display: flex;
- 
-  
 
   &:last-child {
     margin-right: 0;
   }
 
-  
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     padding-top: 0;
     padding-bottom: 0;
-
   }
 
-
-  @media screen and (min-width: 1200px){
+  @media screen and (min-width: 1200px) {
     padding-top: 32px;
     padding-bottom: 32px;
     margin-right: 50px;
-    
-    
   }
 }
 
@@ -213,7 +194,7 @@
   color: $accent-color;
   @extend %link;
   font-weight: 500;
-  
+
   display: flex;
   align-items: center;
   transition: color 250ms $timing-function;
@@ -223,21 +204,16 @@
     color: $title-text-color;
   }
 
-  
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     font-size: 12px;
     line-height: 1.16;
     margin-bottom: 10px;
-
   }
 
-
-  @media screen and (min-width: 1200px){
+  @media screen and (min-width: 1200px) {
     font-size: 14px;
-   line-height: 1.2;
-   margin-bottom: 0;
-   
-    
+    line-height: 1.2;
+    margin-bottom: 0;
   }
 }
 
@@ -249,9 +225,7 @@
   &:hover,
   &:focus {
     fill: $accent-color;
-  }  
-  
-
+  }
 }
 
 .contact__number {
@@ -267,8 +241,7 @@
     color: $accent-color;
   }
 
-   
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     font-size: 12px;
     line-height: 1.16;
     margin-bottom: 10px;
@@ -276,15 +249,11 @@
     &:last-child {
       margin-bottom: 0;
     }
-
   }
 
-
-  @media screen and (min-width: 1200px){
+  @media screen and (min-width: 1200px) {
     font-size: 14px;
-   line-height: 1.2;
-   margin-bottom: 0;
-   
-    
+    line-height: 1.2;
+    margin-bottom: 0;
   }
 }
