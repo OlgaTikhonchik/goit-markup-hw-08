@@ -383,8 +383,8 @@ img {
   top: 0;
   left: 0;
   z-index: 10;
-  width: 100vw;
-  height: 100wh;
+  min-width: 480px;
+  min-height: 796px;
   background-color: #ffffff;
   padding: 48px 40px;
   display: -webkit-box;
