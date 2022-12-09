@@ -2,25 +2,58 @@
   @extend %container;
   display: flex;
   align-items: center;
+
+  
 }
+
 
 .head {
   border-bottom: 1px solid #ececec;
 }
 
+.header__nav {
+  display: flex;
+  align-items: center;
+}
 .logo {
   color: $secondary-text-color;
   @extend %link;
   font-family: "Raleway";
-  font-size: 26px;
-  line-height: 1.2;
-  margin-right: 93px;
-  margin-top: 24px;
-  margin-bottom: 25px;
+  font-size: 24px;
+  line-height: 1.16;
+  margin-right: 276px;
+
+  @media screen and (max-width: 480px){
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  
+  
+  @media screen and (min-width: 768px) {
+    margin-right: 87px;
+    font-size: 24px;
+    line-height: 1.16;
+    margin-top: 24px;
+    margin-bottom: 25px;
+
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+    font-size: 26px;
+    line-height: 1.19;
+    margin-top: 24px;
+    margin-bottom: 25px;
+
+  }
 }
+
 
 .logo__accent {
   color: $accent-color;
+  // margin-top: 16px;
+  // margin-bottom: 16px;
+
 }
 
 .site-nav__link {
@@ -31,7 +64,7 @@
     position: relative;
     display: block;
     color: $primary-text-color;
-    
+  
     font-weight: 500;
     letter-spacing: 0.02em;
     padding-top: 32px;
@@ -106,6 +139,12 @@
   @extend %list;
   display: inline-flex;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 90px;
+
+  }
+  
 }
 
 .site-nav__item {
@@ -125,8 +164,10 @@
   }
 
   @media screen and (min-width: 768px) {
+    display: flex;
     flex-direction: column;
-}
+
+  }
   
   @media screen  and (min-width: 1200px){
     display: flex;
@@ -144,12 +185,27 @@
 .contact__item {
   @extend %link;
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  margin-right: 50px;
+ 
+  
 
   &:last-child {
     margin-right: 0;
+  }
+
+  
+  @media screen and (min-width: 768px){
+    padding-top: 0;
+    padding-bottom: 0;
+
+  }
+
+
+  @media screen and (min-width: 1200px){
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-right: 50px;
+    
+    
   }
 }
 
@@ -157,8 +213,7 @@
   color: $accent-color;
   @extend %link;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.2;
+  
   display: flex;
   align-items: center;
   transition: color 250ms $timing-function;
@@ -167,7 +222,25 @@
   &:focus {
     color: $title-text-color;
   }
+
+  
+  @media screen and (min-width: 768px){
+    font-size: 12px;
+    line-height: 1.16;
+    margin-bottom: 10px;
+
+  }
+
+
+  @media screen and (min-width: 1200px){
+    font-size: 14px;
+   line-height: 1.2;
+   margin-bottom: 0;
+   
+    
+  }
 }
+
 .contact__icon {
   margin-right: 10px;
   fill: currentColor;
@@ -176,19 +249,42 @@
   &:hover,
   &:focus {
     fill: $accent-color;
-  }
+  }  
+  
+
 }
 
 .contact__number {
   color: $title-text-color;
   @extend %link;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.2;
+  // font-size: 14px;
+  // line-height: 1.2;
   transition: color 250ms $timing-function;
 
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+
+   
+  @media screen and (min-width: 768px){
+    font-size: 12px;
+    line-height: 1.16;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+
+
+  @media screen and (min-width: 1200px){
+    font-size: 14px;
+   line-height: 1.2;
+   margin-bottom: 0;
+   
+    
   }
 }
