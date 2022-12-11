@@ -110,9 +110,9 @@ img {
   font-family: "Raleway";
   font-size: 24px;
   line-height: 1.16;
-  margin-right: 276px;
+  margin-right: auto;
 }
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
   .logo {
     padding-top: 16px;
     padding-bottom: 16px;
@@ -123,8 +123,6 @@ img {
     margin-right: 87px;
     font-size: 24px;
     line-height: 1.16;
-    margin-top: 24px;
-    margin-bottom: 25px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -132,8 +130,6 @@ img {
     margin-right: 93px;
     font-size: 26px;
     line-height: 1.19;
-    margin-top: 24px;
-    margin-bottom: 25px;
   }
 }
 
@@ -396,10 +392,13 @@ img {
   top: 0;
   left: 0;
   z-index: 10;
-  min-width: 480px;
-  min-height: 796px;
+  width: 100vw;
+  height: 100vh;
   background-color: #ffffff;
   padding: 48px 40px;
+}
+.mob-menu > .menu-container {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -423,8 +422,7 @@ img {
   }
 }
 
-.menu-close,
-.menu-open {
+.menu-close {
   position: absolute;
   top: 10px;
   right: 15px;
@@ -449,9 +447,35 @@ img {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.menu-close:focus, .menu-close:hover,
-.menu-open:focus,
-.menu-open:hover {
+.menu-close:focus, .menu-close:hover {
+  color: #2196f3;
+}
+
+.menu-open {
+  position: absolute;
+  right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  margin-left: auto;
+  padding: 0;
+  color: #212121;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-open:focus, .menu-open:hover {
   color: #2196f3;
 }
 
@@ -475,7 +499,8 @@ img {
 }
 
 .menu-list {
-  margin-bottom: 302px;
+  margin-top: auto;
+  margin-bottom: 64px;
 }
 
 .menu-list__item {
@@ -617,15 +642,11 @@ img {
   margin-bottom: 30px;
   color: #ffffff;
   font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-@media screen and (max-width: 768px) {
-  .hero__title {
-    font-size: 26px;
-    line-height: 1.61;
-  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
@@ -993,8 +1014,15 @@ img {
   background-color: #188ce8;
 }
 
-.feature {
-  padding-bottom: 0;
+@media screen and (min-width: 768px) {
+  .feature {
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature {
+    padding-bottom: 0;
+  }
 }
 
 .feature__list {
@@ -1060,7 +1088,7 @@ img {
 
 .feature__text {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 30px;
   color: #757575;
   font-size: 14px;
   line-height: 1.71;
@@ -1122,14 +1150,10 @@ img {
 
 .teams__title {
   margin-bottom: 30px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-}
-@media screen and (max-width: 767px) {
-  .teams__title {
-    font-size: 28px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .teams__title {
