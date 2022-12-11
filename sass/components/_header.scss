@@ -12,6 +12,7 @@
   display: flex;
   align-items: center;
 }
+
 .logo {
   color: $secondary-text-color;
   @extend %link;
@@ -19,6 +20,8 @@
   font-size: 24px;
   line-height: 1.16;
   margin-right: auto;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
   @media screen and (min-width: 480px) {
     padding-top: 16px;
