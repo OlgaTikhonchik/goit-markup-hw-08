@@ -1,32 +1,7 @@
-// .mob-menu {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: $white-color;
-//   padding: 48px 40px;
-
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   overflow: auto;
-
-//   opacity: 1;
-//   transition: opacity 250ms $timing-function, transform 250ms $timing-function,
-//     visibility 250ms $timing-function;
-
-// }
-
 .mob-menu.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
-  .mobile-menu {
-    transform: translate(-50%, -50%) scale(0.7);
-    opacity: 0;
-  }
 }
 
 .mob-menu {
@@ -38,12 +13,10 @@
   height: 100vh;
   background-color: $white-color;
   padding: 48px 40px;
-  > .menu-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: auto;
-  }
+  display: flex;
+  flex-direction: column;
+
+  overflow: auto;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -125,11 +98,9 @@
 
 .menu-list {
   @extend %list;
-
-  margin-top: auto;
-  margin-bottom: 64px;
 }
-.menu-list__item {
+
+.menu-list__item:not(:last-child) {
   margin-bottom: 32px;
 }
 
