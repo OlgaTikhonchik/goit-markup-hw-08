@@ -141,19 +141,20 @@
 .menu-contacts__link {
   @extend %link;
   font-weight: 500;
-  font-size: 34px;
-  line-height: 1.17;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
-  color: $accent-color;
+  color: $title-text-color;
 }
 
 .menu-contacts__number {
   @extend %link;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 34px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
-  color: $title-text-color;
+
+  color: $accent-color;
 }
 
 .menu-soc {

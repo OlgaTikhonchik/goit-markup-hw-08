@@ -13,9 +13,10 @@
 }
 
 .address {
-  @media screen and (min-width: 480px) {
-    margin-bottom: 60px;
-  }
+  margin-bottom: 60px;
+  // @media screen and (min-width: 480px) {
+  //   margin-bottom: 60px;
+  // }
 
   @media screen and (min-width: 1200px) {
     width: 231px;
@@ -110,11 +111,12 @@
   gap: 10px;
   @extend %list;
   justify-content: center;
+  margin-bottom: 60px;
 
   @media screen and (min-width: 480px) {
     align-items: center;
     justify-content: center;
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
   }
 }
 
